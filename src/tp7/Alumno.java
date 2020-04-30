@@ -13,23 +13,34 @@ public class Alumno{
         this.nombre = nombre;
     }
     public  void agregarMateria(Materia m){
+        System.out.println("agregando "+m.getNombre());
+        Iterator<Materia> it=materias.iterator();
+        while(it.hasNext()){
+            Materia materia= it.next();
+            if( materia.getNombre().equals(m.getNombre()) ){
+                System.out.println(materia.getNombre()+" ya se a agregado anteriormente");
+                System.out.println("----------------------------------------------");
+                return;
+            }
+        }
         materias.add(m);
+        System.out.println("______________________________________________");
     }
     public int cantidadMaterias(){
         int i=0;
         //forma 1
-        for(Materia it:materias)
-            i++;
+        //for(Materia it:materias)
+        //    i++;
         //forma 2
-        //Iterator it=materias.iterator();
+        Iterator it=materias.iterator();
         /*for(;it.hasNext();it.next())
             i++;
         */
         //forma 3
-        /*while(it.hasNext()){
+        while(it.hasNext()){
             it.next();
             i++;
-        }*/
+        }
         return i;
     }
 

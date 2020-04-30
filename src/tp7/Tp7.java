@@ -5,6 +5,7 @@ public class Tp7 {
         Materia I = new Materia(1,"Ingles",1);
         Materia M = new Materia(1,"Matemáticas",1);
         Materia L = new Materia(1,"Laboratorio 1",1);
+        Materia L1 = new Materia(1,"Laboratorio 1",1);
         
         Alumno a1= new Alumno(1001,"Lopez","Martin");
         Alumno a2= new Alumno(1002,"Martinez","Breda");
@@ -12,15 +13,24 @@ public class Tp7 {
         a1.agregarMateria(M);
         a1.agregarMateria(I);
         a1.agregarMateria(L);
+        System.out.println("**********************************************");
+        System.out.println(" ");
         
-        a2.agregarMateria(M);
         a2.agregarMateria(I);
+        a2.agregarMateria(M);
         a2.agregarMateria(L);
         a2.agregarMateria(L);
+        a2.agregarMateria(L1);
+        a2.agregarMateria(new Materia(1,"Matemáticas",1));
+        System.out.println("**********************************************");
+        System.out.println(" ");
+        
+        
         
         System.out.print("El alumno "+a1.getNombre()+" "+a1.getApellido());
         System.out.println(" esta incripto en "+a1.cantidadMaterias()+" materias.");
         a1.mostrarMaterias();
+        System.out.println(" ");
         
         
         System.out.print("El alumno "+a2.getNombre()+" "+a2.getApellido());
