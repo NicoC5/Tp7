@@ -12,12 +12,13 @@ public class Alumno{
         this.apellido = apellido;
         this.nombre = nombre;
     }
+
     public  void agregarMateria(Materia m){
         System.out.println("agregando "+m.getNombre());
         Iterator<Materia> it=materias.iterator();
         while(it.hasNext()){
             Materia materia= it.next();
-            if( materia.getNombre().equals(m.getNombre()) ){
+            if( materia.equals(m) ){
                 System.out.println(materia.getNombre()+" ya se a agregado anteriormente");
                 System.out.println("----------------------------------------------");
                 return;

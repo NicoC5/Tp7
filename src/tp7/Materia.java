@@ -9,7 +9,22 @@ public class Materia {
         this.nombre = nombre;
         this.año = año;
     }
-            
+    
+    @Override
+    public boolean equals(Object o) {
+        if(o!=null || o instanceof Materia){
+            Materia otra=(Materia)o;
+            if(nombre==otra.getNombre())
+                return true;
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return idMateria;
+    }
+    
     public int getIdMateria() {
         return idMateria;
     }
