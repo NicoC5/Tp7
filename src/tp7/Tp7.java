@@ -38,6 +38,10 @@ public class Tp7 {
         a2.mostrarMaterias();
         
         //los dos alumnos tienen la misma cantidad de materias porq las materias se guardaron
-        //en un HasSet el cual no permite terner elementos duplicados
+        //en un HashSet el cual guarda elementos desordenados y no permite ternerlos duplicados
+        
+        //tambien se sobreescribieron los metodos equals() y hashCode() para evitar las materias
+        //repetidas q por los atributos se ven q son objetos iguales, pero los metodos mencionados antes de 
+        //modificar los ven como objetos distintoss.
     }
 }

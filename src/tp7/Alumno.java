@@ -17,7 +17,6 @@ public class Alumno{
         if(materias.add(m)){
             System.out.println(m.getNombre()+" se ha agregado con exito");
             System.out.println("______________________________________________");
-            return;
         }
         else{
             System.out.println(m.getNombre()+" no se ha podidio agregar");
