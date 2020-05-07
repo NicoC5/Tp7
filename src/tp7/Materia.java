@@ -14,7 +14,7 @@ public class Materia {
     public boolean equals(Object o) {
         if(o!=null || o instanceof Materia){
             Materia otra=(Materia)o;
-            if(nombre==otra.getNombre())
+            if(nombre.equals(otra.getNombre()))
                 return true;
         }
         return false;
@@ -22,7 +22,7 @@ public class Materia {
 
     @Override
     public int hashCode() {
-        return idMateria;
+        return nombre.hashCode();
     }
     
     public int getIdMateria() {

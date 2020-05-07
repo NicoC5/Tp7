@@ -14,35 +14,18 @@ public class Alumno{
     }
 
     public  void agregarMateria(Materia m){
-        System.out.println("agregando "+m.getNombre());
-        Iterator<Materia> it=materias.iterator();
-        while(it.hasNext()){
-            Materia materia= it.next();
-            if( materia.equals(m) ){
-                System.out.println(materia.getNombre()+" ya se a agregado anteriormente");
-                System.out.println("----------------------------------------------");
-                return;
-            }
+        if(materias.add(m)){
+            System.out.println(m.getNombre()+" se ha agregado con exito");
+            System.out.println("______________________________________________");
+            return;
         }
-        materias.add(m);
-        System.out.println("______________________________________________");
+        else{
+            System.out.println(m.getNombre()+" no se ha podidio agregar");
+            System.out.println("----------------------------------------------");
+        }
     }
     public int cantidadMaterias(){
-        int i=0;
-        //forma 1
-        //for(Materia it:materias)
-        //    i++;
-        //forma 2
-        Iterator it=materias.iterator();
-        /*for(;it.hasNext();it.next())
-            i++;
-        */
-        //forma 3
-        while(it.hasNext()){
-            it.next();
-            i++;
-        }
-        return i;
+        return materias.size();
     }
 
     public void mostrarMaterias(){
